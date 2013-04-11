@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe "Static pages" do
 
+	let(:base_title) { "ONPS Compiere Wiki- Compiere Knowledge, For the Benefit of All Mankind" }
+
 	describe "Home page" do
 
 		it "should have the h1 'Compiere Wiki'" do
@@ -14,7 +16,7 @@ describe "Static pages" do
 			#visit root_path
 			visit '/static_pages/home'
 			page.should have_selector('title', 
-		text: "ONPS Compiere Wiki- Compiere Knowledge, For the Benefit of All Mankind.")
+		text: "#{base_title} | Home")
 		end
 	end
 
@@ -30,7 +32,7 @@ describe "Static pages" do
 			#visit help_path
 			visit '/static_pages/help'
 			page.should have_selector('title', 
-		text: "ONPS Compiere Wiki- Compiere Knowledge, For the Benefit of All Mankind.")
+		text: "#{base_title} | Help")
 		end
 	end
 

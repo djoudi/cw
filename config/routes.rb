@@ -1,4 +1,8 @@
 Cw::Application.routes.draw do
+  get "articles/new"
+
+  get "pages/new"
+
   get "static_pages/home"
 
   get "static_pages/help"

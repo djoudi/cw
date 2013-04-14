@@ -1,4 +1,6 @@
 Cw::Application.routes.draw do
+  get "users/new"
+
   get "articles/new"
 
   get "pages/new"

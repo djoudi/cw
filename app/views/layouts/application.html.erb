@@ -13,6 +13,10 @@ ONPS Compiere Wiki- Compiere Knowledge, For the Benefit of All Mankind | <%=
 	<body>
 		<%= render 'layouts/header' %>
 		<div class="container">
+			<% flash.each do |key, value| %>
+				<%= content_tag(:div, value, class: "alert alert-#{key}") %>
+			<% end %>
+
 			<%= yield %>
 			<%= render 'layouts/footer' %>
 			<%= debug(params) if Rails.env.development? %>

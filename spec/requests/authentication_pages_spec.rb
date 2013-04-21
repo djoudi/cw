@@ -44,4 +44,33 @@ describe "AuthenticationPages" do
 
 		end
 	end 
+
+	describe "authoriation" do
+	
+		
+
+		describe "for non-signed-in users" do
+			let(:user) { FactoryGirl.create(:user) }
+
+			#might be missing some tests here
+
+			describe "in the Articles controller" do
+		
+				describe "submitting to the create action" do
+					before { post articles_path }
+					specify { response.should redirect_to(signin_path) }
+				end
+
+				describe "submitting to the edit action" do
+					before { get edit_article_path(FactoryGirl.create(:article)) }
+					specify { response.should redirect_to(signin_path) }
+				end
+			end
+		end
+	end
+
+
 end
+
+
+

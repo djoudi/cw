@@ -1,6 +1,8 @@
 Cw::Application.routes.draw do
 	resources :users
 	resources :sessions, only: [:new, :create, :destroy]
+	resources :articles, only: [:edit, :create, :destroy]
+
 
 	#match '/signup', 	to: 'users#new'
 	match '/signin',		to: 'sessions#new'
@@ -11,8 +13,9 @@ Cw::Application.routes.draw do
 
 	match '/help', to: 'static_pages#help' 
 
-  get "articles/new"
-  get "pages/new"
+  #get "articles/new"
+ 	#get "articles/show"
+  #get "pages/new"
   #get "static_pages/home"
   #get "static_pages/help"
 

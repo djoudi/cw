@@ -1,0 +1,36 @@
+<% provide(:title, "Edit article") %>
+<h1>Edit Article</h1>
+<% if signed_in? %>
+	<aside class="span4">
+		<section>
+			<%= render 'articles/article_form' %>
+		</section>
+	</aside>
+<% else %> 
+	<p>
+		You must be a registered user to add or edit articles.
+	</p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

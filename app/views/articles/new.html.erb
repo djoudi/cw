@@ -1,5 +1,24 @@
-<!--<h1>Articles#new</h1>
-<p>Find me in app/views/articles/new.html.erb</p>-->
+<% provide(:title, "New article") %>
+<h1>New Article</h1>
+<% if signed_in? %>
+
+
+			<%= render 'articles/article_form' %>
+
+
+<% else %> 
+	<p>
+		You must be a registered user to add or edit articles.
+	</p>
+<% end %>
+
+
+
+
+
+
+
+
 
 
 

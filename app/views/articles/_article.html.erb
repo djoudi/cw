@@ -1,6 +1,6 @@
 <li>
-	<span class="content"><%= article.title %></span>
-	<span class="timestamp">
-		Posted <%= time_ago_in_words(article.updated_at) %> ago.
-	</span>
+
+	<%= link_to article.title, article %>
+
+
 </li>

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_filter :signed_in_user, only: [:edit, :create, :destroy]
+	before_filter :signed_in_user, only: [:new, :update, :edit, :create, :destroy]
 
 	def show
 		@article = Article.find(params[:id])
@@ -15,13 +15,18 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		@article = Article.new
-		
-		redirect_to @article
+		@article = Article.new(params[:article])
+		if @article.save
+			flash[:sucess] = "Hey, way to go on that new article, it looks really great!"
+			redirect_to @article
+		else
+			render 'new'
+		end
 
 	end
 
 	def edit
+		@article = Article.find(params[:id])
 	end
 
 	def update
@@ -38,6 +43,15 @@ class ArticlesController < ApplicationController
 
 	def destroy
 	end
+
+
+
+
+
+
+
+
+
 
 	
 end

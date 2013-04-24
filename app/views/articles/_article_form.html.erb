@@ -1,5 +1,5 @@
-<div class="row">
-	<div class="span8 offset3">
+<div class="container">
+	<div class="span12">
 		<%= form_for(@article) do |f| %>
 
 			<%= render 'shared/error_messages', object: f.object %>
@@ -8,10 +8,22 @@
 			<%= f.text_field :title %>
 
 			<%= f.label "Content" %>
-			<%= f.text_field :content %>
-
+			<%= f.text_area :content %>
+				<br>
 			<%= f.submit "Create Article", class: "btn btn-large btn-primary" %>
 		<% end %>
+
+		<!--<% if @article.errors.any? %>
+			<div id="error_explanation">
+				<ul>
+					<% @article.errors.full_messages.each do |msg| %>
+						<li><%= msg %></li>
+					<% end %>
+				</ul>
+			</div<
+		<% end %>-->
+
+
 	</div>
 </div>
 

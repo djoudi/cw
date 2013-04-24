@@ -45,7 +45,7 @@ describe "AuthenticationPages" do
 		end
 	end 
 
-	describe "authoriation" do
+	describe "authorization" do
 	
 		
 

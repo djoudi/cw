@@ -9,8 +9,12 @@
 //
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
+//My signed-in user dropdown wasn't working (the link was turning grey
+//but the dropdown itself didn't appear.  Finally found the answer on 
+//SO, and I had to move jquery below bootstrap in the order below.  No
+//idea why that worked, but it did.  
 //
-//= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery
 //= require_tree .

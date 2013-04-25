@@ -1,12 +1,20 @@
 ---
-Compiere_logo.JPG: Compiere_logo-1c8456522e2c38d20fb5ed5c6fe6df12.JPG
-Compiere_logo/index.JPG: Compiere_logo-1c8456522e2c38d20fb5ed5c6fe6df12.JPG
+Compiere_logo_black.png: Compiere_logo_black-8db4555327d8a3c3cb6300d3214da994.png
+Compiere_logo_black/index.png: Compiere_logo_black-8db4555327d8a3c3cb6300d3214da994.png
+Compiere_logo_black_small.png: Compiere_logo_black_small-80da12f27cff504a365f23ae987a1e79.png
+Compiere_logo_black_small/index.png: Compiere_logo_black_small-80da12f27cff504a365f23ae987a1e79.png
+OLD/Compiere_logo.JPG: OLD/Compiere_logo-1c8456522e2c38d20fb5ed5c6fe6df12.JPG
+OLD/Compiere_logo/index.JPG: OLD/Compiere_logo-1c8456522e2c38d20fb5ed5c6fe6df12.JPG
+OLD/Compiere_logo_black_small.png: OLD/Compiere_logo_black_small-37658466aa7dc2667c5eb1db0b66c2d3.png
+OLD/Compiere_logo_black_small/index.png: OLD/Compiere_logo_black_small-37658466aa7dc2667c5eb1db0b66c2d3.png
+OLD/Compiere_logo_black_small_full.png: OLD/Compiere_logo_black_small_full-e5d7749bfc049022e7022f7c5264bdb9.png
+OLD/Compiere_logo_black_small_full/index.png: OLD/Compiere_logo_black_small_full-e5d7749bfc049022e7022f7c5264bdb9.png
 rails.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
 rails/index.png: rails-a3386665c05a2d82f711a4aaa72d247c.png
-application.js: application-e40ced72cc6173c51302dbb294d36324.js
-application/index.js: application-e40ced72cc6173c51302dbb294d36324.js
-application.css: application-dc94b506ec3bd0b9fe76f419764f7a88.css
-application/index.css: application-dc94b506ec3bd0b9fe76f419764f7a88.css
+application.js: application-9972fdbfcd9152fdd4a38f2b44e1ae51.js
+application/index.js: application-9972fdbfcd9152fdd4a38f2b44e1ae51.js
+application.css: application-ebf3b690478bc3f72145c2f3f31d8502.css
+application/index.css: application-ebf3b690478bc3f72145c2f3f31d8502.css
 glyphicons-halflings-white.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings-white/index.png: glyphicons-halflings-white-6cccd17a7aed91dbc0157d343c68c0d9.png
 glyphicons-halflings.png: glyphicons-halflings-2851b489e8c39f8fad44fc10efb99c3e.png

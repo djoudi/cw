@@ -16,7 +16,7 @@ section {
 }
 
 textarea {
-	resize: vertical;
+	resize: both;
 }
 
 /*this centers text for every div where class="center ..."*/
@@ -153,10 +153,11 @@ $grayMediumLight: #eaeaea;
 }
 
 
+/* FORMS */
 
-
-
-
+input, textarea {
+	width: 90%
+}
 
 
 

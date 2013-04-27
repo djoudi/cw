@@ -11,8 +11,15 @@
 		<p><%= @article.content %></p>
 
 		<br>
-		<p><%= link_to "Edit Article", edit_article_path %></p>
 
+<span class="timestamp">
+	
+
+
+
+<% if signed_in? %>
+		<p><%= link_to "Edit Article", edit_article_path %></p>
+<% end %>
 
 	</div>
 </div>

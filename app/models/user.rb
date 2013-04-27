@@ -16,6 +16,9 @@ class User < ActiveRecord::Base
 	before_save { |user| user.email = email.downcase }
 	before_save :create_remember_token
 
+	model_stamper
+	stampable
+
 	validates :name, 	presence: true, length: { maximum: 50 }
 	validates :email, presence: true, uniqueness: { case_sensitive: false }
 	validates :password, presence: true, length: { minimum: 6 }

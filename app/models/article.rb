@@ -4,4 +4,8 @@ class Article < ActiveRecord::Base
 	validates :title, 	presence: true, uniqueness: true
 	validates :content, presence: true, uniqueness: true
 
+	has_paper_trail
+
+
+
 end

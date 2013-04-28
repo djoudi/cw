@@ -6,15 +6,15 @@
 		<p><%= @article.content %></p>
 
 		<br>
-<p> Created by:
-<% if @article.versions.first.originator != nil %>
-	<%= User.find_by_id(@article.versions.first.originator).name %></p>
+<p>
+<% unless @article.versions.first.originator.nil? %>
+	Created by: <%= User.find_by_id(@article.versions.first.originator).name %></p>
 <% end %>
 	
 
-<p>Last updated by: 
-<% if @article.originator != nil %>
-	<%= User.find_by_id(@article.originator).name %></p>
+<p>
+<% unless @article.originator.nil? %>
+	Last updated by: <%=  User.find_by_id(@article.originator).name %></p>
 <% end %>
 
 <% if signed_in? %>

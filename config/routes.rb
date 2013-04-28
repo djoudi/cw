@@ -13,8 +13,8 @@ Cw::Application.routes.draw do
 
 	match '/help', to: 'static_pages#help' 
 
-  get "articles/new"
- 	get "articles/show"
+  get "articles/new" #is there a reason I left these two 'duplicate'
+ 	get "articles/show" #routes in here?
   #get "pages/new"
   #get "static_pages/home"
   #get "static_pages/help"

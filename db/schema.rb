@@ -18,7 +18,6 @@ ActiveRecord::Schema.define(:version => 20130427024036) do
     t.string   "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
-    t.string   "userstamps"
   end
 
   create_table "users", :force => true do |t|
@@ -28,7 +27,6 @@ ActiveRecord::Schema.define(:version => 20130427024036) do
     t.datetime "updated_at",      :null => false
     t.string   "password_digest"
     t.string   "remember_token"
-    t.string   "userstamps"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

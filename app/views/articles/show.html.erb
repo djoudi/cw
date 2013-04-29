@@ -3,7 +3,7 @@
 <div class="container">
 	<div class="span8">
 		<h3><%= @article.title %></h3>
-		<p><%= @article.content %></p>
+		<p><%= @article.content.html_safe %></p>
 
 		<br>
 <p>

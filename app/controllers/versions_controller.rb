@@ -4,8 +4,9 @@ class VersionsController < ApplicationController
 		@versions = Version.all
 	end
 
-	def show
+	def show_version
 		@version = Version.find(params[:id])
+		@version.reify
 	end
 
 	

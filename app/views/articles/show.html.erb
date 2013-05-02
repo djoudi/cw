@@ -20,18 +20,18 @@
 <% if signed_in? %>
 		<p><%= link_to "Edit Article", edit_article_path %></p>
 <% end %>
-
+</p>
 	</div>
 
-	<!--<div class="span2">
-		<p>
-				@article.versions.each do |version|
-					unless version.reify.nil?	
-						link_to "Version #{version.id}", @article.version.reify
-					end
-				end
-		</p>
-	<div/>-->
+
+	<p>Versions: <%= @article.versions.size %></p>
+<!--<p>View version:
+if @article.versions.any? %>
+	@article.versions.each do |version|-->
+
+
+
+	<ul><%= render "layouts/version" %></ul>
 
 
 

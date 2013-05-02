@@ -1,0 +1,36 @@
+<% if !@versions.empty? %>
+	<h3>Latest Version: <%= @versions.length %></h3>	
+	<b>Version <%= "#{@versions.length}" %> Created At: </b><br>
+	<%= @versions.last.created_at %><br>
+	<b>By:</b> <%= @versions.last.whodunnit %><br>
+		<% if params[:version] %>
+			<h3>Viewing Version: <%= "#{params[:version]}" %></h3>		
+			<b>Version <%= "#{params[:version]}" %> Created at:</b><br>
+			<%= @versions[(params[:version].to_i - 1)].created_at %><br>
+			<b>By</b>:<%= @versions[(params[:version].to_i - 1)].whodunnit %><br>
+			<%= link_to "Go to most recent version" %><br>
+		<% end %>
+	<% v_num = 1 %>
+	<% if @versions.length.to_i > 1 %>	
+		<% if params[:version].to_i > 1 || !params[:version] %>
+			<b>Versions:</b></br>
+			<% if params[:version].nil? %>	
+				<% v_num = @versions.length.to_i - 1%>	
+				<% @versions.each do %>
+					<%= link_to "Version #{params[:version].to_i + v_num}", 
+											{:version => (params[:version].to_i + v_num)} %> 
+					<% v_num -= 1 %><br>	
+				<% end %>
+			<% else %>
+				<% @versions.each do %>
+					<%= link_to "Version #{@versions.length.to_i - v_num}", 
+											{:version => (@versions.length.to_i - v_num)} %> 
+					<% v_num += 1 %>
+					<br>	
+				<% end %>			
+			<% end %>	
+		<% end %>
+	<% end %>
+<% else %>
+	<p>This item does not have any registered version.</p>
+<% end %>

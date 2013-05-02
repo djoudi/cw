@@ -3,7 +3,20 @@ class ArticlesController < ApplicationController
 
 	def show
 		@article = Article.find(params[:id])
+		@versions = @article.versions
+		@article = @article.versions[params[:version].to_i].reify if params[:version]
+		#show!
 	end
+
+#	def show_versions
+#		@article = Article.find(params[:id])
+#		@all_versions = @article.versions
+#	end	
+#
+#	def show_one_version(idx)
+#		@version = @article.versions[idx]
+#		#version_link = view_context.link_to(""	versions_show_version_path		 
+#	end
 
 	def index
 		@articles = Article.all
